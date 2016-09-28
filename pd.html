@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉刷新</title>
+    <meta name="apple-mobile-web-app-title" content="添加主屏后的标题">
+    <meta name="apple-touch-fullscreen" content="yes"><!-- //启用webapp全屏模式 -->
+    <meta name="apple-mobile-web-app-capable" content="yes"><!-- //启用webapp全屏模式 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- //状态栏背景色，只有再有前一个设置时才会有 -->
+    <meta http-equiv="Cache-Control" content="no-siteapp"><!-- //百度浏览器禁止转码，禁止百度贴广告 -->
+    <meta name="format-detection" content="telephone=no" /><!-- //禁止ios将数字识别为手机号码 --><!--  <a href="tel:123">123</a> <a href="sms:123">短信</a>-->
+    <meta name="format-detection" content="email=no" /> <!-- //禁止安卓对邮箱的识别 -->
+    <meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--winphone系统a input标签被点击时产生的半透明灰色背景去掉方法 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta property="qc:admins" content="2405223735316636757" />
+    <meta name="wap-font-scale" content="no">
+    <style>
+        .pullDown{width:100%;height:1000px;background: #ddd;position: absolute;}
+    </style>
+</head>
+<body>
+<div class="refreshBoxWrap">
+
+</div>
+
+<div class="pullDown">
+
+</div>
+</body>
+<script src="zepto.min.js"></script>
+<script src="pd.js"></script>
+<script>
+    var pd = new PD({
+        dDom:'.pullDown',
+        rWrap:'.refreshBoxWrap',
+        imgUrl:'loading.png'
+    })
+</script>
+</html>
